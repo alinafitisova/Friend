@@ -1,5 +1,5 @@
 
-//JS-функция определения поддержки WebP
+//WebP support detection function
 
 function testWebP(callback) {
 
@@ -14,4 +14,26 @@ testWebP(function (support) {
     if (support == true) {
         document.querySelector('body').classList.add('webp');
     }
+});
+// burger function
+;$(document).ready(function() {
+    $('.header__burger').click(function(event) {
+        $('.header__burger, .header__menu').toggleClass('active');
+        $('body').toggleClass('lock');
+    });
+
+    $('.header-slider').slick({
+        dots: true,
+        arrows : false,
+        infinite: true,
+        speed: 800,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 4000,
+        speed: 1000,
+        cssEase: 'linear',
+        appendArrows: false,
+        pauseOnDotsHover: true
+        });
 });
