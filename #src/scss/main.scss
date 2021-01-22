@@ -8,18 +8,33 @@
     font-style: #{$style};
         }
 }
-@import "fonts", "vars_mixins", "header";
+@import "normalize", 
+        "fonts", 
+        "vars_mixins", 
+        "header",
+        "header-slider";
 
 body {
     font-family: $mainFont;
     color: $primaryCol;
+    scroll-behavior: smooth;
+    &.lock {
+    @media (max-width: 767px)  {
+        overflow: hidden;
+        }
+    } 
 }
 .container {
-    max-width: 1610px;
+    max-width: 1400px;
+    min-width: 0;
+    min-height: 0;
     margin: auto;
     padding: 0 70px;
     @media (max-width: 1024px) {
-        padding: 0 30px;
+        padding: 0 70px;
+    }
+    @media (max-width: 768px) {
+        padding: 0 40px;
     }
     @media screen and (max-width: 425px) {
         padding: 0 10px;

@@ -26,14 +26,14 @@ testWebP(function (support) {
         dots: true,
         arrows : false,
         infinite: true,
-        speed: 800,
         fade: true,
         cssEase: 'linear',
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 5000,
         speed: 1000,
         cssEase: 'linear',
         appendArrows: false,
         pauseOnDotsHover: true
         });
 });
+
