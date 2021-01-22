@@ -35,5 +35,16 @@ testWebP(function (support) {
         appendArrows: false,
         pauseOnDotsHover: true
         });
+
+    $('.lost-slider').slick({
+        dots: false,
+        arrows : true,
+        infinite: true,
+        lazyLoad: 'ondemand',
+        speed: 1000,
+        cssEase: 'linear',
+        appendArrows: false,
+        
+        });
 });
 

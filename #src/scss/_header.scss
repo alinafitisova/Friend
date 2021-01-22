@@ -31,12 +31,15 @@
         }
     }
     &__mail {
-        margin-bottom: 30px;
+        margin: -35px 0 15px;
     }
-    
+    &__address svg{
+        margin-left: -5px;
+    }
     &__mail, 
     &__address {
         color: $primaryCol;
+        font-size: 12px;
         display: block;
         text-decoration: none;
         z-index: 5;
@@ -76,8 +79,10 @@
         text-decoration: none;
         margin-top: 15px;
             &:hover {
-                transition: all 0.4s ease 0s;
-                background: #ffde00 url("/img/bgPaw.png") 20px 10px ; 
+                background: #ffde00 url("../img/bgPaw.png") 20px 18px;
+                top: 2px;
+                box-shadow: 0px 4px 0px #a7a40b;
+                transition: all .5s;
                 color: #000; 
                 }
             &:hover svg {
@@ -86,6 +91,7 @@
             & svg {
                 fill: #fff;
                 margin-right: 10px;
+                padding-left: 7px;
                 }
             @media screen and (max-width: 768px) {
                 font-size: 16px;
@@ -171,7 +177,7 @@
         background: $secondaryCol;
         transition: all 0.5s ease 0s;
         padding: 55px 30px 25px 40px;
-        z-index: 4;
+        z-index: 10;
         @media screen and (max-width: 1000px) {
             width: 40%;
             height: 80%;
