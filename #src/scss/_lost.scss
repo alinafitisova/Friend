@@ -13,17 +13,17 @@
         z-index: 7;
     }
     &__inner {
-        height: 57vh;
+        height: 60vh;
+        width: 100%;
         display: flex;
         align-items: center;
+        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.2);
         @media screen and (max-width: 660px) {
             flex-direction: column;
             height: 80vh;
         }
     }
     &__pic {
-        width: 48%;
-        height: 100%;
         background-repeat: no-repeat;
         background-position: top center;
         background-size: cover;  
@@ -34,7 +34,7 @@
     }
     &__pic ,
     &__description{
-        width: 48%;
+        width: 50%;
         height: 100%;
         z-index: 7;
         @media screen and (max-width: 660px) {
@@ -44,7 +44,7 @@
     }
     &__description {
         background: $cardCol;
-        padding: 0 35px;
+        padding: 15px 35px;
         box-sizing: border-box;
     }
     &__heading {
@@ -55,7 +55,7 @@
         justify-content: center;   
     }
     &__title {
-        font-size: 23px;
+        @include title(left);
         @media screen and (max-width: 960px) {
             font-size: 18px;
         }
@@ -72,12 +72,14 @@
         }
     }
     &__btn {
-        @include btn($secondaryCol, #fff, 20px , 20px ,$primaryCol);
         @media screen and (max-width: 768px){
             font-size: 14px;
         }
     }
 
+}
+.btn {
+    @include btn($secondaryCol, #fff, 20px , 20px ,$primaryCol);
 }
 .slick-arrow{
     position: absolute;

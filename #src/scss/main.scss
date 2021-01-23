@@ -13,7 +13,8 @@
         "vars_mixins", 
         "header",
         "header-slider",
-        "lost";
+        "lost",
+        "adopt";
 
 
 body {
@@ -28,13 +29,9 @@ body {
 }
 .container {
     max-width: 1400px;
-    min-width: 0;
-    min-height: 0;
-    margin: auto;
-    padding: 0 70px;
-    @media (max-width: 1024px) {
-        padding: 0 70px;
-    }
+    margin: 0 auto;
+    padding: 0 50px;
+    
     @media (max-width: 768px) {
         padding: 0 40px;
     }
