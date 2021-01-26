@@ -1,10 +1,22 @@
   // -------------HEADER-SLIDER--------------//
+.hero {
+    .container{
+        @media screen and (max-width: 800px) {
+            padding: 0;
+        }
+    }
+}
 
 .header-slider {
-    width: 100vw;
-    height: auto;
+    width: 100%;
+    height: 100vh;
     position: relative;
-    box-sizing: border-box;
+    &__item {
+        height: 100vh;
+        // @media screen and (max-width: 425px)  {
+        //     height: 80vh;
+        // }
+    }
     &__inner{
         width: 100%;
         height: 100%;
@@ -13,29 +25,27 @@
         justify-content: center;
         align-items: flex-start;
         background-repeat: no-repeat;
-        background-position: top right 270px;
+        background-position: top right;
         background-size: contain;
         padding-top: 50px;
-        @media screen and (max-width: 1360px) {
-            background-position: top right 100px;
+        @media screen and (max-width: 1200px) {
+            background-position: top 40px right;
         }
-        @media screen and (max-width: 950px) {
-            background-position: top 60px right 30px;
-            // align-items: flex-end;
+        @media screen and (max-width: 770px) {
+            background-size:  auto 100%;
+            background-position: top 50px center;
         }
-        @media screen and (max-width: 650px) {
-            background-position: center right 30%;
-            background-size: 551px 475px;
+        // @media screen and (max-width: 525px) {
+        //     background-size:  cover;
+        //     background-position: top 50px center;
+        // }
+        @media screen and (max-width: 425px) {
+            background-size: cover;
+            background-attachment: local;
+            
         }
     }
 }   
-.header-slider__item {
-    height: calc(100vh - -25px);
-    width: 100vw;
-    position: relative;
-    box-sizing: border-box;
-}
-
 .header-slider .slick-arrow {
     display: none;
 }
@@ -43,6 +53,11 @@
     display: flex;
     margin-top: -95px;
     outline: none;
+    @media screen and (max-width: 1024px) {
+        margin-top: -30px;
+        justify-content: center;
+    
+    }
     & li{
         list-style: none;
         margin: 0 10px;
@@ -67,6 +82,10 @@
         padding: 0;
         margin-bottom: 40px;
         cursor: pointer;
+        @media screen and (max-width: 1024px) {
+            width: 11px;
+            height: 11px;
+        }
     }
     
 }
@@ -82,9 +101,6 @@
         @include title(left);
         margin: 0;
         line-height: 60px;
-        @media (max-width: 900px) {
-            font-size: 25px;
-        }
     }
     &__description{
         font-size: 17px;

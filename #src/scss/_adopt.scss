@@ -1,6 +1,5 @@
 
 .adopt {
-    height: 25vh;
     margin-top: -12px;
     padding-top: 25px;
     z-index: 7;
@@ -9,28 +8,37 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        margin-top: 150px;
+        @media screen and (max-width: 650px) {
+            margin-top: 300px;
+        }
     }
 	&__title {
         @include title(center);
-        margin-top: 150px;
+        // margin-top: 150px;
 	}
-
 	&__subtitle {
-        font-size: 24px;
+        font-size: 20px;
         color: #7f7f7f;
         text-align: center;
+        @media screen and (max-width: 1024px) {
+            font-size: 18px;
+        }
+        @media screen and (max-width: 880px) {
+            font-size: 16px;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 15px;
+        }
 	}
-
-	
 	&__cards {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
 	}
-
 	&__inner {
         height: 40vh;
-        width: 48%;
+        width: 49%;
         display: flex;
         align-items: center;
         box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.2);
@@ -103,10 +111,17 @@
         
     }
     &__text {
-        line-height: 25px;
-        overflow: scroll; 
-    }
-	
+        width: 100%;
+        max-height: 120px;
+        line-height: 22px;
+        overflow: hidden; 
+        transition: max-height 0.8s;
+        // transition: all 0.5s ease 0s;
+            &.short{
+                max-height: 100%;
+                overflow:overlay;
+            }
+    }   
 	&__btn {
         font-family: "Roboto-Bold";
         font-weight: 700;
@@ -133,6 +148,11 @@
             background: #ffde00 url("../img/bgPaw.png") 20px 18px; 
             }
     }
+.readMore {
+    font-size: 12px;
+    cursor: pointer;
+    align-self: flex-end;
+}
 .btn {
     @include btn($secondaryCol, #fff, 20px , 60px ,$primaryCol);
     display: inline-block;

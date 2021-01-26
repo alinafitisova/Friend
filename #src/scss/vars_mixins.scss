@@ -33,4 +33,14 @@ $mainFont: "Roboto-Regular";
     font-family: $mainFont;
     font-weight: 400;
     color: $primaryCol;
+    @media screen and (max-width: 1024px) {
+        font-size: 35px;
+    }
+    @media screen and (max-width: 880px) {
+        font-size: 30px;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 25px;
+    }
+
 }

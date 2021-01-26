@@ -1,0 +1,97 @@
+.about {
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    margin-top: -12px;
+    padding-top: 25px;
+	&__inner {
+        height: 65vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.2);
+        margin-bottom: 40px;
+        @media screen and (max-width: 660px) {
+            flex-direction: column;
+            height: 80vh;
+        }
+    }
+    &__pic ,
+    &__description {
+        width: 50%;
+        height: 100%;
+        @media screen and (max-width: 660px) {
+            width: 100%;
+            height: 48%;
+        }
+    }
+	&__pic {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;  
+	}
+	&__description {
+        background: $cardCol;
+        padding: 10px 20px;
+        box-sizing: border-box;
+	}
+	&__heading {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;  
+	}
+	&__title {
+        @include title (left); 
+	}
+    &__text {
+        width: 100%;
+        line-height: 25px;
+        min-height: 40%;
+        @media screen and (max-width: 960px) {
+            font-size: 14px;
+            line-height: 19px;
+        }
+        @media screen and (max-width: 768px){
+            max-height: 40%;
+            overflow: scroll;
+        }
+    }   
+	&__btn {
+        font-family: "Roboto-Bold";
+        font-weight: 700;
+        font-size: 15px;
+        background: transparent;
+        border: 4px $secondaryCol solid;
+        border-bottom: none;
+        padding: 10px 10px;
+        text-decoration: none;
+        color: $secondaryCol;
+        display: inline-block;
+        align-self: left;
+        transition: all .5s;
+        position: relative;
+        top: 0;
+        box-shadow: 0px 3px 0px #247e4b;
+        text-align: center;
+        &:hover {
+            color: #000;
+            top: 2px;
+            border-color: #a7a40b9a;
+            box-shadow: 0px 3px 0px #a7a40b;
+            transition: all .5s;
+            background: #ffde00 url("../img/bgPaw.png") 20px 18px; 
+            }
+    }
+
+.btn {
+    @include btn($secondaryCol, #fff, 20px , 60px ,$primaryCol);
+    display: inline-block;
+    
+    }
+}
+
+
+

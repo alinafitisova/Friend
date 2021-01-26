@@ -6,6 +6,9 @@
     margin-top: -12px;
     padding-top: 25px;
     z-index: 7;
+    .container {
+        padding: 0 10px;
+    }
 }
 .lost-slider {
     z-index: 1;
@@ -18,9 +21,9 @@
         display: flex;
         align-items: center;
         box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.2);
-        @media screen and (max-width: 660px) {
+        @media screen and (max-width: 650px) {
             flex-direction: column;
-            height: 80vh;
+            height: 620px;
         }
     }
     &__pic {
@@ -28,7 +31,7 @@
         background-position: top center;
         background-size: cover;  
         position: relative;
-        @media screen and (max-width: 660px) {
+        @media screen and (max-width: 650px) {
             background-position: center center;
         }
     }
@@ -37,9 +40,9 @@
         width: 50%;
         height: 100%;
         z-index: 7;
-        @media screen and (max-width: 660px) {
+        @media screen and (max-width: 650px) {
             width: 100%;
-            height: 48%;
+            height: 49%;
         }
     }
     &__description {
@@ -56,9 +59,6 @@
     }
     &__title {
         @include title(left);
-        @media screen and (max-width: 960px) {
-            font-size: 18px;
-        }
     }
     &__text {
         line-height: 25px;
@@ -83,81 +83,65 @@
 }
 .slick-arrow{
     position: absolute;
-    top: 44%;
-    z-index: 7;
+    bottom: 4px;
+    z-index: 10;
     font-size: 0;
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    border: 1px solid rgb(247, 55, 55);
-    border-radius: 50%;
+    width: 50px;
+    height: 100px;
+    background-color: #fff;
     transition: all .15s;
     outline: none;
     cursor: pointer;
-    @media screen and (max-width: 1024px) {
-        top: 43%;
-    }
-    @media screen and (max-width: 540px) {
-        top: 103%;
-    }
-    &:hover{
-        background: linear-gradient( 45deg, rgba(85, 184, 255, 0.692) 0%, rgba(126, 90, 255, 0.555) 100%)
-    }
-        &:after{
+        @media screen and (max-width: 650px)  {
+            width: 65px;
+            height: 65px;
+            top: 242px;
+            box-shadow: 0px 10px 4px -5px rgba(34, 60, 80, 0.31);
+        }
+        &:hover{
+            transition: all .5s;
+            background: #ffde00 url("../img/bgPaw.png") 20px 18px; 
+        }
+        &:after {
         content: '';
         display: block;
-        width: 5px;
-        height: 5px;
+        width: 10px;
+        height: 10px;
         position: absolute;
-        top: 34px;
+        top: 40px;
         transform: rotate(45deg);
-        @media screen and (max-width: 1024px) {
-        width: 4px;
-        height: 4px;
-        top: 19px;
+        }    
+}
+.slick-prev,
+.slick-next {
+    border: none;
+    &::after{
+        top: 44px;
+        @media screen and (max-width: 650px) {
+            top: 28px;
         }
-        
-    }
-    @media screen and (max-width: 1024px)  {
-        width: 28px;
-        height: 28px;
     }
 }
 .slick-prev {
-left: -99px;
-@media screen and (max-width: 540px) {
-    left: -50px;
-}
-@media screen and (max-width: 280px) {
-    left: -45px
-}
-&::after{
-    border-left: 2px solid rgba(255, 255, 255, 0.562);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.562);
-    right: 15px;
-    top: 15px;
-    @media screen and (max-width: 1024px) {
-    left: 21px;
-    }
-
-    }
-}
-.slick-next{
-    right:  -91px;
-    @media screen and (max-width: 540px) {
-        right: -40px;
-    }
-    @media screen and (max-width: 280px) {
-        left: 160px
-    }
+    left: 0px;
     &::after{
-        border-right: 2px solid rgb(255, 22, 22);
-        border-top: 2px solid rgb(250, 5, 5);
-        right: 15px;
-        top: 15px;
-        @media screen and (max-width: 1024px) {
-        right: 10px;
-        top: 10px;
+        border-left: 2px solid $primaryCol;
+        border-bottom: 2px solid $primaryCol;
+        right: 10px;  
+        @media screen and (max-width: 650px) {
+            right: 23px;
         }
+    }
+    
+}
+.slick-next {
+    left: 50px;
+    &::after{
+        border-right: 2px solid $primaryCol;
+        border-top: 2px solid $primaryCol;
+        right: 26px;
+    }
+    @media screen and (max-width: 650px) {
+        left: 65px;
     }
 }
