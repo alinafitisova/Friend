@@ -25,7 +25,7 @@ const docWidth = document.documentElement.offsetWidth;
     }
 )
 
-// jQuery toggleBurger function
+// jQuery toggleurger function
 ;$(document).ready(function() {
     $('.header__burger').click(function(event) {
         $('.header__burger, .header__menu').toggleClass('active');
@@ -54,13 +54,35 @@ const docWidth = document.documentElement.offsetWidth;
         speed: 1000,
         cssEase: 'linear'
     });
-      // To up window button
+    // jQuery readMore function
+    
+    $('.readMore').click(function(event) {
+        $('.adopt__text').toggleClass('short');
+    });
+     // To up window button
     $(window).on('scroll', function () {
-      if ($(this).scrollTop() > 500) {
+        if ($(this).scrollTop() > 500) {
         $('.up-button').fadeIn();
-      } else {
+        } else {
         $('.up-button').fadeOut();
-      }
+        }
+    });
+    // Modal window DONATE
+    $(document).ready(function() {
+        $('a.donateLink').click( function(event){
+            event.preventDefault();
+            $('#Overlay').fadeIn(297,	function(){
+            $('#donatModal') 
+            .css('display', 'block')
+            .animate({opacity: 1}, 198);
+            });
+        });
+        $('#donatModal__close, #Overlay').click( function(){
+            $('#donatModal').animate({opacity: 0}, 198, function(){
+                $(this).css('display', 'none');
+                $('#Overlay').fadeOut(297);
+            });
+        });
     });
 });
 

@@ -5,7 +5,7 @@ let source_folder = '#src';
 let fs = require('fs');
 
 let path = {
-        build:{
+        build :{
             html: project_folder + "/",
             css: project_folder + "/css/",
             js: project_folder + "/js/",
